@@ -1,0 +1,174 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_organizer",
+				"type": "address"
+			}
+		],
+		"name": "setHasFood",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "setHasFoodUser",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_organizer",
+				"type": "address"
+			}
+		],
+		"name": "setHasShirt",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "setHasShirtUser",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_organizer",
+				"type": "address"
+			}
+		],
+		"name": "setIsEnter",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "setIsEnterUser",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"name": "_user",
+				"type": "address"
+			},
+			{
+				"name": "_balance",
+				"type": "uint256"
+			},
+			{
+				"name": "_firstname",
+				"type": "string"
+			},
+			{
+				"name": "_lastname",
+				"type": "string"
+			},
+			{
+				"name": "_email",
+				"type": "string"
+			},
+			{
+				"name": "_mobile",
+				"type": "string"
+			},
+			{
+				"name": "_birthday",
+				"type": "uint256"
+			},
+			{
+				"name": "_gender",
+				"type": "string"
+			},
+			{
+				"name": "_shirtsize",
+				"type": "string"
+			},
+			{
+				"name": "_foodtype",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getHasFood",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getHasShirt",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getIsEnter",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	}
+]

@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  .row
+    .col-sm-12
+      #logo_container
+        img#logo(src='images/logo.png', alt='logo')
+        img#io(src='images/io.png', alt='io')
+        .btn-group
+          button.btn.btn-primary(role='button',id="loginUportBtn",onclick="openUportPopup()") LOGIN WITH UPORT
+          button.btn.btn-primary(role='button',id="loginQrCodeBtn") LOGIN WITH QR CODE
+  .row
+  #uportWrap.col-sm-6
+  
