@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
 const challengeDataScheme = new mongoose.Schema({
-  userName: {type:String, required:true},
+  userName: String,
   userEmail: String,
   challengeID: String,
+  files: String,
   completedDate: String
 }, {timestamps: true });
 

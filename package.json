@@ -47,5 +47,7 @@
   "peerDependencies": {
     "node-sass": "^4.7.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^1.17.5"
+  }
 }

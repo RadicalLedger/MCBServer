@@ -146,8 +146,8 @@ app.get('/api/user/leaderboard',passportConfig.isAuthenticated, eventUserControl
 app.get('/import', passportConfig.isAuthenticated, adminController.getFileUpload);
 app.post('/import', passportConfig.isAuthenticated, adminController.postFileUpload);
 //app.post('/signup', userController.postSignup);
-app.post('/api/challengecompletion', userController.extractUserData);
-app.post('/usersignup', userController.extractUserData);
+app.post('/api/challengecompletion', userController.extractChallengeData);
+app.post('/api/usersignup', userController.extractRegData);
 /**
  * Error Handler.
  */
