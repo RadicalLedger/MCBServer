@@ -28,7 +28,7 @@ const upload = multer({ dest: path.join(__dirname, 'uploads') });
  * Load environment variables from .env file, where API keys and passwords are configured.
  */
 //dotenv.load({ path: '.env.example' });
-dotenv.load({ path: '.env_mlab' });
+dotenv.load({ path: '.env' });
 
 /**
  * Controllers (route handlers).
@@ -146,8 +146,8 @@ app.get('/api/user/leaderboard',passportConfig.isAuthenticated, eventUserControl
 app.get('/import', passportConfig.isAuthenticated, adminController.getFileUpload);
 app.post('/import', passportConfig.isAuthenticated, adminController.postFileUpload);
 //app.post('/signup', userController.postSignup);
-app.post('/api/challengecompletion', userController.extractUserData);
-app.post('/usersignup', userController.extractUserData);
+app.post('/api/challengecompletion', userController.extractChallengeData);
+app.post('/api/usersignup', userController.extractRegData);
 /**
  * Error Handler.
  */

@@ -3,6 +3,7 @@ const crypto = bluebird.promisifyAll(require('crypto'));
 const passport = require('passport');
 const User = require('../models/User');
 const RegModel = require('../models/Reg');
+const ChallengeModel = require('../models/Challenge');
 
 /**
  * GET /login
@@ -52,7 +53,7 @@ exports.postLogin = (req, res, next) => {
       res.redirect(req.session.returnTo || '/');
     });
   })(req, res, next);
-};
+}; 
 
 
 
@@ -180,9 +181,26 @@ exports.logout = (req, res) => {
    });
  };
 
-exports.extractUserData = (req, res, next) => {
+exports.extractRegData = (req, res, next) => {
   const reg = new RegModel({email: req.body.email});
   reg.save(err => {
+    if (err) {
+      console.log(err);
+      res.status(500).send({message: err._message});
+    }
+  });
+
+  res.status(200).send({});
+};
+
+exports.extractChallengeData = (req, res, next) => {
+  const challenge = new ChallengeModel(
+    {userName: req.body.userName,
+    userEmail: req.body.userEmail,
+    challengeID: req.body.challengeID,
+    files: req.body.files,
+    completedDate: req.body.completedDate});
+  challenge.save(err => {
     if (err) {
       console.log(err);
       res.status(500).send({message: err._message});
