@@ -142,10 +142,10 @@ app.get('/user/all',passportConfig.isAuthenticated, eventUserController.getAllUs
 app.get('/user/attended',passportConfig.isAuthenticated, eventUserController.getAllAttendedUsers);
 app.get('/leaderboard',passportConfig.isAuthenticated, eventUserController.getLeaderboard);
 app.get('/api/user/leaderboard',passportConfig.isAuthenticated, eventUserController.getLeaderboardData);
-//app.get('/signup', userController.getSignup);
+app.get('/signup', userController.getSignup);
 app.get('/import', passportConfig.isAuthenticated, adminController.getFileUpload);
 app.post('/import', passportConfig.isAuthenticated, adminController.postFileUpload);
-//app.post('/signup', userController.postSignup);
+app.post('/signup', userController.postSignup);
 app.post('/api/challengecompletion', userController.extractChallengeData);
 app.post('/api/usersignup', userController.extractRegData);
 /**

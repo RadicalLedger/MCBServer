@@ -2,7 +2,7 @@ extends ../layout
 
 block content
   .page-header
-    h3(style="text-align:center") Google I/O Sri Lanka - Sign in
+    h3(style="text-align:center") Sign in
   form.form-horizontal(method='POST')
     input(type='hidden', name='_csrf', value=_csrf)
     .form-group
@@ -18,5 +18,7 @@ block content
         button.col-sm-3.btn.btn-primary(type='submit')
           i.fa.fa-user
           | Login
+        a.col-sm-3.btn.btn-primary(href='/signup')
+          | Signup
     .form-group
       .col-sm-offset-3.col-sm-7

@@ -6,7 +6,7 @@ html
     meta(name='viewport', content='width=device-width, initial-scale=1.0')
     meta(name='theme-color' content='#4DA5F4')
     meta(name='csrf-token', content=_csrf)
-    title #{title} - io2018
+    title #{title} 
     link(rel='apple-touch-icon', sizes='57x57', href='/images/apple-icon-57x57.png')
     link(rel='apple-touch-icon', sizes='60x60', href='/images/apple-icon-60x60.png')
     link(rel='apple-touch-icon', sizes='72x72', href='/images/apple-icon-72x72.png')
@@ -28,53 +28,8 @@ html
     link(rel='stylesheet', href='/css/jquery.loading.css')
     
   body
-    include partials/header
-
     .container
       include partials/flash
       block content
 
-    include partials/footer
-  #successModal.modal.fade(role='dialog')
-    .modal-dialog.modal-lg
-      .modal-content
-        .modal-header
-          button.close(type='button', data-dismiss='modal') ×
-          h4#successModalTitle.modal-title Welcome
-        #successModalBody.modal-body(style='text-align:center')
-        .modal-footer
-          button#enterbutton.btn.btn-primary.btn-lg(type='button',style='display:none;width:200px') Enter
-          h1#detailenterlabel.display-4(style='color:red;display:none') Registered
-  #videoPreviewModal.modal.fade(role='dialog')
-    .modal-dialog.modal-lg
-      .modal-content
-        .modal-header
-          button.close(type='button', data-dismiss='modal') ×
-          h4.modal-title Scan QR code
-        .modal-body(style='text-align:center')
-          video#preview(style='width:100% !important')
-        .modal-footer
-  #serverMessageModal.modal.fade(role='dialog')
-    .modal-dialog.modal-md
-      .modal-content
-        .modal-header
-          button.close(type='button', data-dismiss='modal') ×
-          h4#serverMessageModalTitle.modal-title 
-        #serverMessageModalBody.modal-body(style='text-align:center')
-        .modal-footer
-  #uportQrModal.modal.fade(role='dialog')
-    .modal-dialog.modal-md
-      .modal-content
-        .modal-header
-          button.close(type='button', data-dismiss='modal') ×
-          h4#uportQrModalTitle.modal-title Scan with uPort App.
-        #uportQrModalBody.modal-body(style='text-align:center')
-        .modal-footer
-    script(src='/js/lib/jquery-3.1.1.min.js')
-    script(src='/js/lib/bootstrap.min.js')
-    script(src='https://unpkg.com/uport-connect/dist/uport-connect.min.js')
-    script(src='/js/lib/instascan.min.js')
-    script(src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js')
-    script(src='/js/jquery.loading.js')
-    script(src='/js/lib/kjua-0.1.1.min.js')
-    script(src='/js/main.js')
+  

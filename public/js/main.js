@@ -1,11 +1,8 @@
 $(document).ready(function() {
-$( "#loginQrCodeBtn" ).click(function() {
-  initQRScan();
+$( "#viewChallengeBtn" ).click(function() {
+  
 });
 
-initAllUserDataGrid();
-initAttendedUserDataGrid();
-initLeaderBoardGrid();
 });
 
 

@@ -9018,12 +9018,22 @@ body {
   margin-bottom: 40px;
 }
 
-#loginQrCodeBtn{
+#viewChallengeBtn{
   width: 250px;
   margin-left: 20px;
   border-radius: 0.65rem;
   background-color: transparent;
   border: 2px solid #0739ae;
+}
+
+#viewChallengesBtn{
+  width: 250px;
+  margin-left: 20px;
+  border-radius: 0.65rem;
+  background-color: transparent;
+  border: 2px solid #0739ae;
+  position: relative;
+  float: left;
 }
 
 #loginUportBtn{
@@ -9132,7 +9142,7 @@ input
   bottom: 0;
   height:20px  !important;
 }
-  #loginUportBtn, #loginQrCodeBtn
+  #loginUportBtn, #viewChallengeBtn
   {
     width:100%
   }
@@ -9150,8 +9160,10 @@ input
    margin-left: 5%;
    margin-right: 5%;
  }
-
- #loginQrCodeBtn
+.signup {
+  margin-left: 20px;
+}
+ #viewChallengeBtn
  {
    margin-left: 0;
    margin-top:10px;
