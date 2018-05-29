@@ -210,6 +210,15 @@ exports.extractChallengeData = (req, res, next) => {
   res.status(200).send({});
 };
 
+exports.viewChallenges = () => {
+  ChallengeModel.find({}).toArray(function(err,result){
+    if(err)
+      throw err;
+    else
+      console.log(result);
+  });
+};
+
 /**
  * POST /account/profile
  * Update profile information.

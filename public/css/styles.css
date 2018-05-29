@@ -9026,16 +9026,6 @@ body {
   border: 2px solid #0739ae;
 }
 
-#viewChallengesBtn{
-  width: 250px;
-  margin-left: 20px;
-  border-radius: 0.65rem;
-  background-color: transparent;
-  border: 2px solid #0739ae;
-  position: relative;
-  float: left;
-}
-
 #loginUportBtn{
   width: 250px;
   border-radius: 0.65rem;
@@ -9117,6 +9107,9 @@ input
   top:5% !important;
 }
 
+.signup {
+  margin-left: 20px;
+}
 
 @media only screen and (max-width: 600px) {
   
@@ -9160,9 +9153,7 @@ input
    margin-left: 5%;
    margin-right: 5%;
  }
-.signup {
-  margin-left: 20px;
-}
+
  #viewChallengeBtn
  {
    margin-left: 0;

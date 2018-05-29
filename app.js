@@ -35,8 +35,6 @@ dotenv.load({ path: '.env' });
  */
 const homeController = require('./controllers/home');
 const userController = require('./controllers/user');
-const eventUserController = require('./controllers/eventuser');
-const adminController = require('./controllers/admin');
 /**
  * API keys and Passport configuration.
  */
@@ -132,22 +130,11 @@ app.get('/',passportConfig.isAuthenticated, homeController.index);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
-//app.get('/eventuser/entered',passportConfig.isAuthenticated, eventUserController.getEventUserEnter);
-app.get('/eventuser/entered',passportConfig.isAuthenticated, eventUserController.getEventUserEnter);
-app.get('/eventuser/markentered',passportConfig.isAuthenticated, eventUserController.markEventUserEnter);
-//app.post('/api/user/create',passportConfig.isAuthenticated, eventUserController.postApiCreateEventEventUser);
-app.get('/api/user/all',passportConfig.isAuthenticated, eventUserController.getAllEventMasterUsers);
-app.get('/api/user/attended',passportConfig.isAuthenticated, eventUserController.getAllEventUsers);
-app.get('/user/all',passportConfig.isAuthenticated, eventUserController.getAllUsers);
-app.get('/user/attended',passportConfig.isAuthenticated, eventUserController.getAllAttendedUsers);
-app.get('/leaderboard',passportConfig.isAuthenticated, eventUserController.getLeaderboard);
-app.get('/api/user/leaderboard',passportConfig.isAuthenticated, eventUserController.getLeaderboardData);
 app.get('/signup', userController.getSignup);
-app.get('/import', passportConfig.isAuthenticated, adminController.getFileUpload);
-app.post('/import', passportConfig.isAuthenticated, adminController.postFileUpload);
 app.post('/signup', userController.postSignup);
-app.post('/api/challengecompletion', userController.extractChallengeData);
-app.post('/api/usersignup', userController.extractRegData);
+app.post('/challengecompletion', userController.extractChallengeData);
+app.post('/usersignup', userController.extractRegData);
+app.get('/challenges', userController.viewChallenges);
 /**
  * Error Handler.
  */

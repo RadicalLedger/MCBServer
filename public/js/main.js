@@ -1,8 +1,22 @@
-$(document).ready(function() {
-$( "#viewChallengeBtn" ).click(function() {
-  
-});
+const Challenge = require('../models/Challenge');
 
+
+$(document).ready(function() {
+// $( "#viewChallengeBtn" ).click(function() {
+//   console.log('clicked');
+//   //$("#challengeModal").modal('show');
+//   Challenge.find({}).toArray(function(err,result){
+//     if(err)
+//       throw err;
+//     else
+//       console.log(result);
+//   });
+// });
+
+// $( "#loginQrCodeBtn" ).click(function() {
+//   initQRScan();
+// });
+console.log('ready');
 });
 
 
