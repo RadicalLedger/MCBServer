@@ -8988,6 +8988,48 @@ body {
   text-align: center !important
 }
 
+.challengeHeading{
+  color: white;
+  font-size: 20px;
+  margin-left: 60px;
+}
+
+.challengeTable{
+  margin: 100px auto;
+  margin-top: 20px;
+  color: white;
+  border: solid;
+}
+
+.challengeTable td{
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.challengeTable th{
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.regTable{
+  margin-top: 20px;
+  margin-left: 60px;
+  color: white;
+  border: solid;
+}
+
+.regTable td{
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.regTable th{
+  padding-bottom: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
 #logo_container{
   display: block;
   margin-left: auto;

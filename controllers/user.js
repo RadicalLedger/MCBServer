@@ -210,13 +210,20 @@ exports.extractChallengeData = (req, res, next) => {
   res.status(200).send({});
 };
 
-exports.viewChallenges = () => {
-  ChallengeModel.find({}).toArray(function(err,result){
-    if(err)
-      throw err;
-    else
-      console.log(result);
+exports.viewChallenges = (req,res) => {
+  var challenges = [];
+  ChallengeModel.find({}, (err,result) => {
+    if (err)
+      console.log(err);
+    challenges.push(result);
   });
+  
+  // setTimeout(() => {},5000);
+  res.setHeader("send", challenges);
+  res.render('account/challenges',{
+    title: 'Challenges'
+  });
+
 };
 
 /**
