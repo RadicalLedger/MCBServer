@@ -211,6 +211,9 @@ exports.extractChallengeData = (req, res, next) => {
 };
 
 exports.viewChallenges = (req,res) => {
+  if (!req.user) {
+    return res.redirect('/login');
+  }
   var challenges = [];
   ChallengeModel.find({}, (err,result) => {
     if (err) console.log(err);
@@ -224,6 +227,9 @@ exports.viewChallenges = (req,res) => {
 };
 
 exports.viewUsers = (req,res) => {
+  if (!req.user) {
+    return res.redirect('/login');
+  }
   var users = [];
   RegModel.find({}, (err,result) => {
     if (err) console.log(err);
