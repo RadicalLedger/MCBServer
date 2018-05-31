@@ -213,17 +213,27 @@ exports.extractChallengeData = (req, res, next) => {
 exports.viewChallenges = (req,res) => {
   var challenges = [];
   ChallengeModel.find({}, (err,result) => {
-    if (err)
-      console.log(err);
-    challenges.push(result);
+    if (err) console.log(err);
+    challenges = result;
+    // setTimeout(() => {},5000);
+    res.render('account/challenges',{
+      title: 'Challenges',
+      challenges: challenges
+    });
   });
-  
-  // setTimeout(() => {},5000);
-  res.setHeader("send", challenges);
-  res.render('account/challenges',{
-    title: 'Challenges'
-  });
+};
 
+exports.viewUsers = (req,res) => {
+  var users = [];
+  RegModel.find({}, (err,result) => {
+    if (err) console.log(err);
+    users = result;
+    // setTimeout(() => {},5000);
+    res.render('account/users',{
+      title: 'Users',
+      users: users
+    });
+  });
 };
 
 /**

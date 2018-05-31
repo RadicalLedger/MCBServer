@@ -135,6 +135,8 @@ app.post('/signup', userController.postSignup);
 app.post('/challengecompletion', userController.extractChallengeData);
 app.post('/usersignup', userController.extractRegData);
 app.get('/challenges', userController.viewChallenges);
+app.get('/users', userController.viewUsers);
+
 /**
  * Error Handler.
  */

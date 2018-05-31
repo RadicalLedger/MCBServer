@@ -11,50 +11,10 @@ block content
         th Email
         th Challenge ID
         th Completed date
-      tr
-        td#userName fcc8620a067-2ad3-4559-85e3-d07b8ea67664
-        td#Email stefan.vanderlaan@yahoo.com
-        td#challengeID 560add10cb82ac38a17513be
-        td#completedDate Thu May 24 2018 16:00:00 GMT+0530 (+0530)
-      tr
-        td#userName fcc8620a067-2ad3-4559-85e3-d07b8ea67664
-        td#Email stefan.vanderlaan@yahoo.com
-        td#challengeID bd7123c8c441eddfaeb5bdef
-        td#completedDate Thu May 24 2018 16:00:06 GMT+0530 (+0530)
-      tr
-        td#userName fcc8620a067-2ad3-4559-85e3-d07b8ea67664
-        td#Email stefan.vanderlaan@yahoo.com
-        td#challengeID bad87fee1348bd9aedf0887a
-        td#completedDate Thu May 24 2018 16:00:34 GMT+0530 (+0530)
-      tr
-        td#userName fcc8620a067-2ad3-4559-85e3-d07b8ea67664
-        td#Email stefan.vanderlaan@yahoo.com
-        td#challengeID 560add10cb82ac38a17513be
-        td#completedDate Tue May 29 2018 12:08:49 GMT+0530 (+0530)
-      tr
-        td#userName fcc8620a067-2ad3-4559-85e3-d07b8ea67664
-        td#Email stefan.vanderlaan@yahoo.com
-        td#challengeID bd7123c8c441eddfaeb5bdef
-        td#completedDate Tue May 29 2018 12:08:55 GMT+0530 (+0530)
-    
-    table.regTable
-      .challengeHeading Users registered  
-      tr
-        th User email
-        th Registered date
-      tr
-        td#email stefan.vanderlaan94@hotmail.com
-        td#registeredDate 2018-05-24T10:13:01.504Z
-      tr
-        td#email stefan.vanderlaan@yahoo.com
-        td#registeredDate 2018-05-24T10:13:27.269Z
-      tr
-        td#email john.doe@gmail.com
-        td#registeredDate 2018-05-24T10:29:09.345Z
-      tr
-        td#email alice.n@outlook.com
-        td#registeredDate 2018-05-29T06:38:02.405Z
-      tr
-        td#email davidr@hotmail.com
-        td#registeredDate 2018-05-29T11:45:32.310Z
+      each challenge in challenges
+        tr
+          td #{challenge.userName}
+          td #{challenge.userEmail}
+          td #{challenge.challengeID}
+          td #{challenge.completedDate}
         
